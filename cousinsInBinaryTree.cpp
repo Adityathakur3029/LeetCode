@@ -17,7 +17,7 @@ public:
         queue<TreeNode*> q;
         bool flag=false;                              //turn true when either x or y is found
         
-        q.emplace(root);
+        q.push(root);
         
         
         while(!q.empty()){
@@ -45,9 +45,9 @@ public:
                 }
                 
                 if(curr->left)
-                    q.emplace(curr->left);
+                    q.push(curr->left);
                 if(curr->right)
-                    q.emplace(curr->right);
+                    q.push(curr->right);
             }
             if(flag)                                // one val found but other was missing in same level
                 return false;
