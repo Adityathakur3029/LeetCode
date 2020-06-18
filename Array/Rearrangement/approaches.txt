@@ -9,4 +9,5 @@ Case ii): order matters
          
 2. If we have to rearrange all the negative ele before all the positive ele maintaing the order with no extra space
          - use insertion sort technique  ////(to learn)
-        
+
+3. ////(leran n^2 appraoch to bring all the elements smaller than k in min swaps)
