@@ -11,3 +11,8 @@ Case ii): order matters
          - use insertion sort technique  ////(to learn)
 
 3. ////(leran n^2 appraoch to bring all the elements smaller than k in min swaps)
+
+4. Rearrange an array in maximum minimum form without extra space
+         - multiplication and divide krke
+5. customComparater to make largest value
+
