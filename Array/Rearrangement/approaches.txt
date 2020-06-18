@@ -1,1 +1,12 @@
-
+1. If we have to rearrange an array with alternating sequence of negative and positive elements then in O(1) space then
+Case i): order does not matter
+         - move all the -ve elements at the end of the array and in second iteration swap them with alternate positive elements
+Case ii): order matters
+         - find first outofplace ele
+         - find ele of opp sign from outofplace ele
+         - rightRotate this part of array including outofplace ele and one with opp sign to it.
+         - time will be n^2.
+         
+2. If we have to rearrange all the negative ele before all the positive ele maintaing the order with no extra space
+         - use insertion sort technique  (to learn)
+        
