@@ -13,6 +13,6 @@ Case ii): order matters
 3. ////(leran n^2 appraoch to bring all the elements smaller than k in min swaps)
 
 4. Rearrange an array in maximum minimum form without extra space
-         - multiplication and divide krke
+         - to atore a value from which we can extract prev and new value(multiplication and modular trick)
 5. customComparater to make largest value
 
