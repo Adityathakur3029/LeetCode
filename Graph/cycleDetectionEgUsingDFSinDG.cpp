@@ -5,7 +5,7 @@ public:
         vector<int> color(N,0);                                   //0 as white, 1 as brown , 2 as black  , brown for going fwd black means while coming back
         vector<int> result;
         for(int i=0;i<N;i++){
-            if(dfs(i,graph,color))                               
+            if(dfs(i,graph,color))                               //demand of question
                 result.push_back(i);
         }
         return result;
