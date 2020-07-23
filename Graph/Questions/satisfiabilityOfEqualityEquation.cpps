@@ -1,0 +1,52 @@
+class Solution {
+public:
+    bool equationsPossible(vector<string>& equations) {
+        map<char,vector<char>> graph=makeGraph(equations);
+        
+        vector<int> color(26,0);
+        int cno=1;
+        for(char c='a';c<='z';c++){
+            if(graph.count(c)){
+                if()
+                color[c-'a']=cno++;
+            }
+            if(color[c-'a']==0){
+                dfs(c,graph,color,cno);
+                cno++;
+            }
+            
+        }
+        
+        
+        for(auto s:equations){
+            if(s[1]!=s[2]){
+                if(color[s[0]-'a']==color[s[3]-'a'])
+                    return false;
+            }
+        }
+        return true;
+    }
+    //used different colours to color the graph
+    void dfs(char c,map<char,vector<char>>& graph,vector<int>& color,int& cno){
+        if(!color[c-'a']){
+            color[c-'a']=cno;
+            for(auto neighbour: graph[c]){
+                dfs(neighbour,graph,color,cno);
+            }
+        }
+    }
+    
+    
+    map<char,vector<char>> makeGraph(vector<string>& equations){
+        map<char,vector<char>> graph;
+        for(auto s:equations){
+            if(s[1]==s[2]){
+                if(s[0]!=s[3]){
+                    graph[s[0]].push_back(s[3]);
+                    graph[s[3]].push_back(s[0]);
+                }
+            }
+        }
+        return graph;
+    }
+};
