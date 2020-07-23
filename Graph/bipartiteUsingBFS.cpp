@@ -9,7 +9,7 @@ public:
         int turn=0;                          //take 0 as red
         
         for(int i=0;i<N;i++){               
-            if(visited[i]==-2){             //if not visited
+            if(visited[i]==-2){              //if not visited
                 q.emplace(i,turn);          
                 visited[i]=turn; 
                 while(!q.empty()){
