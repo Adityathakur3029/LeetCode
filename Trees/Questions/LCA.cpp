@@ -12,3 +12,37 @@ public:
         return root;
     }
 };
+
+
+
+//For BST
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root==NULL)
+            return 0;
+        
+        else if(p->val<root->val && q->val<root->val)
+            return lowestCommonAncestor(root->left,p,q);
+        
+        else if(p->val>root->val && q->val>root->val)
+            return lowestCommonAncestor(root->right,p,q);
+        
+        return root;
+    }
+};
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root==NULL)
+            return 0;
+        
+        else if(p->val<root->val && q->val<root->val)
+            return lowestCommonAncestor(root->left,p,q);
+        
+        else if(p->val>root->val && q->val>root->val)
+            return lowestCommonAncestor(root->right,p,q);
+        
+        return root;
+    }
+};
